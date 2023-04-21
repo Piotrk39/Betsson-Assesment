@@ -8,5 +8,5 @@ exports.RegistrationPageObject = class RegistrationPageObject {
 
     static REGISTER_BUTTON = '#nf-field-15';
 
-    static REGISTRATION_BANNER_MESSAGE = '#nf-form-3-cont';
+    static REGISTRATION_BANNER_MESSAGE = "//*[@id='main']//p[text()='Thank you for registering for our event.']";
 }

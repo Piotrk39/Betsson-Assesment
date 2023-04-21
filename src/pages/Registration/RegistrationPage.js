@@ -20,6 +20,8 @@ exports.RegistrationPage = class RegistrationPage extends NavigationBase {
     }
 
     async verifyRegistrationMessage() {
-        await this.waitForElementToHaveText(RegistrationPageObject.REGISTRATION_BANNER_MESSAGE, 'Thank you for registering for our event.');
+        let message = await this.getElementText(RegistrationPageObject.REGISTRATION_BANNER_MESSAGE)
+        console.log(message)
+        await this.waitForElementToHaveText(RegistrationPageObject.REGISTRATION_BANNER_MESSAGE, message);
     }
 }

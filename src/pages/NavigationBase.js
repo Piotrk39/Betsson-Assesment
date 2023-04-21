@@ -1,5 +1,4 @@
 const {expect} = require('@playwright/test');
-const { DashboardPageObject } = require("./Dashboard/DashboardPageObject");
 
 exports.NavigationBase = class NavigationBase {
     constructor(page) {
