@@ -1,4 +1,6 @@
 // @ts-check
+const { devices } = require('@playwright/test');
+
 const config = {
   workers: 1,
   outputDir: './test-results',
@@ -14,7 +16,7 @@ const config = {
           timeout: 10000
       },
       launchOptions: {
-          slowMo: 250,
+        //   slowMo: 250,
           downloadsPath: 'resources/downloads',
           args: ['--start-maximized']
       },
@@ -33,8 +35,16 @@ const config = {
           name: 'Chrome',
           use: {
               channel: 'chrome',
-              baseURL : ''
+              baseURL : 'https://codenboxautomationlab.com/registration-form/'
           },
+      },
+       /* Test against mobile viewports. */
+       {
+        name: 'Mobile Chrome',
+        use: {
+            ...devices['iPhone 13'],
+            baseURL : 'https://codenboxautomationlab.com/registration-form/'
+        },
       },
     //   {
     //       name: 'Edge',

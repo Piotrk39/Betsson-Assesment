@@ -1,5 +1,5 @@
 const { DashboardPageObject } = require('./DashboardPageObject');
-const { NavigationBase } = require("./../NavigationBase");
+const { NavigationBase } = require("../NavigationBase");
 
 exports.DashboardPage = class DashboardPage extends NavigationBase {
 
